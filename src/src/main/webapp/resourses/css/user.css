@@ -1,0 +1,193 @@
+body {
+    margin: 15px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+    background: white;
+    background-color: #EEE;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 13px;
+    height: 100%;
+    
+}
+
+#main { 
+    background: aqua;
+    border-radius:10px;
+
+}
+
+#header {
+    border-radius:10px;
+    height: 250px;
+    background: #aaa;
+}
+
+#logo {
+    height: 155px;
+    width: 155px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#logoText {
+    float: left;
+    margin: 70px 160px 20px 70px;
+    /* font styles apply to text within alt tags */
+    font-family: 'American Typewriter', Courier, monospace;
+    font-size: 30px;
+    color: #333;
+}
+
+#widgetBar {
+    height: 50px;
+    width: 850px;
+    float: right;
+    background: #ccc;
+}
+
+.userHeaderWidget {
+    padding-top: 5px;
+    height: 50px;
+    color: greenyellow;
+    margin: 10px 5px;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+    background: #fff;
+    background: dodgerblue;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.userHeaderWidget>span>a{
+    text-decoration-line: none;
+}
+.userHeaderWidget.span{
+    padding-top: 10px;
+    
+}
+
+
+
+#footer {
+    padding-top: 20px;
+    border-radius:10px;
+    height: 60px;
+    clear: left;
+    background: #aaa;
+    width: auto;
+    color:#cccccc;
+    text-align: center;
+    
+    //clear: both;
+}
+
+#indexLeftColumnForUser {
+    border-radius:5px;
+    height: 300px;
+    width: 75%;
+    float: left;
+}
+
+#indexRightColumnForUser {
+    border-radius:5px;
+    height: 300px;
+    width: 20%;
+    float: right;
+}
+
+.rightMenu{
+    padding-top: 50px;
+    border-radius:5px;
+    height: auto;
+    width: auto;
+    float: left;
+}
+
+.courseRightMenu{
+    padding-top: 50px;
+    border-radius:5px;
+    height: auto;
+    width: auto;
+    float: left;
+}
+.menuButton {
+    padding: 5px  5px ;
+    height: 20px;
+    width: 212px;
+    float: right;
+    background: dodgerblue;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.categoryBox>span>categoryLabelText{
+    padding-top: 120px;
+}
+
+.login_form{
+    padding-left:50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.login_div{
+    width:350px;
+    border: 1px solid #eaeaea;
+    margin: 0 auto;
+    padding:10px;
+
+}
+
+.title {
+    color: #000;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+iframe{
+    display: block;
+}
+
+
+#middle {
+    background-color: #FFF;
+    width: auto;
+    height: 100%;
+    height: max-content;
+    margin:0 auto;
+    border: 1px solid white;
+    display: block;
+}
+
+
+.categoryBox{
+    background:    #2064da;
+background:    -webkit-linear-gradient(#2064da, #2064da 50%, #3660aa 50%, #3660aa);
+background:    linear-gradient(#2064da, #2064da 50%, #3660aa 50%, #3660aa);
+border-radius: 6px;
+color:         #fff;
+display:       inline-block;
+padding:       11px 22px;
+font:          italic 700 22px/1 "Droid Serif", serif;
+text-align:    center;
+text-shadow:   1px 1px 0 #444;
+}
+
+
+#textArea{
+    margin: 10px 50px;
+    border: 2px solid white;
+    height: max-content;
+}
+
+#widgetBar a{
+    color:greenyellow;
+}

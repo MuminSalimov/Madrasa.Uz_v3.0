@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Sprquestiontypes" table="sprquestiontypes" catalog="openeduuz" optimistic-lock="version">
+        <id name="questionTypeId" type="int">
+            <column name="questionTypeID" />
+            <generator class="assigned" />
+        </id>
+        <property name="questionTypeName" type="string">
+            <column name="questionTypeName" length="45" />
+        </property>
+        <property name="questionTypeDescription" type="string">
+            <column name="questionTypeDescription" />
+        </property>
+        <set name="questionandtypesmappings" table="questionandtypesmapping" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="questionTypeID" />
+            </key>
+            <one-to-many class="entity.Questionandtypesmapping" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Usersandrolesmapping" table="usersandrolesmapping" catalog="openeduuz" optimistic-lock="version">
+        <composite-id name="id" class="entity.UsersandrolesmappingId">
+            <key-property name="mappingId" type="int">
+                <column name="mappingID" />
+            </key-property>
+            <key-property name="userEmail" type="string">
+                <column name="user_email" length="45" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="roles" class="entity.Roles" fetch="select">
+            <column name="roleID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="entity.User" update="false" insert="false" fetch="select">
+            <column name="user_email" length="45" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/openeduuz?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <mapping resource="entity/Lectonaddmaterials.hbm.xml"/>
+    <mapping resource="entity/Questionandtypesmapping.hbm.xml"/>
+    <mapping resource="entity/Sprquestiontypes.hbm.xml"/>
+    <mapping resource="entity/Answersforquestions.hbm.xml"/>
+    <mapping resource="entity/Usersandrolesmapping.hbm.xml"/>
+    <mapping resource="entity/Courselections.hbm.xml"/>
+    <mapping resource="entity/Roles.hbm.xml"/>
+    <mapping resource="entity/User.hbm.xml"/>
+    <mapping resource="entity/Lectionquestions.hbm.xml"/>
+    <mapping resource="entity/Lectionmainmaterials.hbm.xml"/>
+    <mapping resource="entity/Addmaterialtypes.hbm.xml"/>
+    <mapping resource="entity/Courses.hbm.xml"/>
+    <mapping resource="entity/Addmaterialandtypesmapping.hbm.xml"/>
+    <mapping resource="entity/Userlearningcourses.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

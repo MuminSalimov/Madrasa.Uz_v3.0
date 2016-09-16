@@ -1,0 +1,26 @@
+<%@page import="entity.User"%>
+<%@ page pageEncoding="UTF-8" %>
+
+<p>
+<footer id="foot01"></footer>   
+</p>
+
+</div>
+
+<!--<div id="footer">
+    <h4 align='left'> Ташкентский Университет Информационных Технологий </h4>
+    <h4 align='left'>Факультет Профессионального образования в сфере ИКТ</p><h4 align='right'> Хаиров Т.Р. и Закирова Ф.М., г. Ташкент 2016 год</h4>
+    <br>
+</div>-->
+
+
+<%
+    u = (User) request.getSession(false).getAttribute("user");
+    if (u != null) {%>
+<script src=<%=getServletContext().getContextPath()%>/resourses/js/scriptForUser.js></script>
+<%} else {
+%>
+<script src="<%=getServletContext().getContextPath()%>/resourses/js/script.js"></script>
+<%}%>
+</body>
+</html>

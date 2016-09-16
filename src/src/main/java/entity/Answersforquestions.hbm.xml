@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Answersforquestions" table="answersforquestions" catalog="openeduuz" optimistic-lock="version">
+        <id name="answerId" type="java.lang.Integer">
+            <column name="answerID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="lectionquestions" class="entity.Lectionquestions" fetch="select">
+            <column name="questionID" />
+        </many-to-one>
+        <property name="answerRu" type="string">
+            <column name="answerRU" />
+        </property>
+        <property name="answerUz" type="string">
+            <column name="answerUZ" />
+        </property>
+        <property name="answerEn" type="string">
+            <column name="answerEN" />
+        </property>
+        <property name="isTrue" type="java.lang.Boolean">
+            <column name="isTrue" />
+        </property>
+    </class>
+</hibernate-mapping>

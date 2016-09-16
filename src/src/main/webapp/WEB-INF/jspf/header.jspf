@@ -1,0 +1,48 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="entity.User"%>
+<%@ page pageEncoding="UTF-8" %>
+<%@page import="javax.servlet.http.HttpSession" %>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="resourses/css/loginStyle.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="resourses/css/courseStyle.css">
+        <link rel="stylesheet" type="text/css" href="resourses/css/main.css">
+        <!--<link rel="stylesheet" type="text/css" href="resourses/css/bootstrap.min.css">-->
+        <title>Madrasa.Uz</title>
+    </head>
+    <body>
+        <%request.setCharacterEncoding("UTF-8");%>
+        <div id="main">
+            <div id="header">
+                <div id="widgetBar">
+                    <%
+                        User u = (User) request.getSession(false).getAttribute("user");
+                        if (u != null) {%>
+                    <div class="userHeaderWidget">
+                        <b>Привет, 
+                            <a href="<%=getServletContext().getContextPath()%>/userCabinet/main.jsp">
+                                <%= u.getUserName() + " " + u.getUserSurname()%></a> ! </b>
+                        <a href="<%=getServletContext().getContextPath()%>/logout.jsp">Выйти</a>
+                    </div>
+                    <%} else {
+                    %>
+                    <%}%>
+                    <div class="userHeaderWidget">
+                        [ <span class="lang-list">
+                            <a href="<%=getServletContext().getContextPath()%>/resourses/images/ru.jpg" title="Русский"> Русский
+                                <img src="<%=getServletContext().getContextPath()%>/resourses/images/ru.jpg">
+                            </a>
+                            ~|~
+                            <a href="<%=getServletContext().getContextPath()%>/resourses/images/uz.jpg" title="Узбекский">
+                                <img src="<%=getServletContext().getContextPath()%>/resourses/images/uz.jpg"> 
+                                Узбекский</a>
+                        </span> ]
+                    </div>
+                </div>
+                <a href="index.jsp" style="font-family: 'Jokerman'; font-size: 70px; color: #0000cc;">
+                    <!--<img src="resourses/images/logo.png" id="logo" alt="Madrasa.Uz logo">-->
+                    <p>'iLove2Learn.Uz'</p>
+                </a>
+                <nav id="nav01"></nav>
+            </div>

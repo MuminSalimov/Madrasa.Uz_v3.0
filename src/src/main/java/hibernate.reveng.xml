@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="openeduuz"/>
+  <table-filter match-name="questionandtypesmapping"/>
+  <table-filter match-name="userlearningcourses"/>
+  <table-filter match-name="lectionquestions"/>
+  <table-filter match-name="roles"/>
+  <table-filter match-name="answersforquestions"/>
+  <table-filter match-name="courselections"/>
+  <table-filter match-name="usersandrolesmapping"/>
+  <table-filter match-name="addmaterialtypes"/>
+  <table-filter match-name="addmaterialandtypesmapping"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="lectionmainmaterials"/>
+  <table-filter match-name="lectonaddmaterials"/>
+  <table-filter match-name="sprquestiontypes"/>
+  <table-filter match-name="courses"/>
+</hibernate-reverse-engineering>

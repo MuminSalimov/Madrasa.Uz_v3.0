@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Courselections" table="courselections" catalog="openeduuz" optimistic-lock="version">
+        <id name="lectionId" type="java.lang.Integer">
+            <column name="lectionID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="courses" class="entity.Courses" fetch="select">
+            <column name="courseID" not-null="true" />
+        </many-to-one>
+        <property name="lectionNumber" type="int">
+            <column name="lectionNumber" not-null="true" />
+        </property>
+        <property name="lectionNameRu" type="string">
+            <column name="lectionNameRU" not-null="true" />
+        </property>
+        <property name="lectionNameUz" type="string">
+            <column name="lectionNameUZ" />
+        </property>
+        <property name="lectionNameEn" type="string">
+            <column name="lectionNameEN" />
+        </property>
+        <property name="lectionDescriptionRu" type="string">
+            <column name="lectionDescriptionRU" not-null="true" />
+        </property>
+        <property name="lectionDescriptionUz" type="string">
+            <column name="lectionDescriptionUZ" />
+        </property>
+        <property name="lectionDescriptionEn" type="string">
+            <column name="lectionDescriptionEN" />
+        </property>
+        <property name="isActive" type="java.lang.Boolean">
+            <column name="isActive" />
+        </property>
+        <set name="lectionmainmaterialses" table="lectionmainmaterials" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lectionID" />
+            </key>
+            <one-to-many class="entity.Lectionmainmaterials" />
+        </set>
+        <set name="lectonaddmaterialses" table="lectonaddmaterials" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lectionID" />
+            </key>
+            <one-to-many class="entity.Lectonaddmaterials" />
+        </set>
+        <set name="userlearningcourseses" table="userlearningcourses" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lectioinID" not-null="true" />
+            </key>
+            <one-to-many class="entity.Userlearningcourses" />
+        </set>
+        <set name="lectionquestionses" table="lectionquestions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lectionID" />
+            </key>
+            <one-to-many class="entity.Lectionquestions" />
+        </set>
+    </class>
+</hibernate-mapping>

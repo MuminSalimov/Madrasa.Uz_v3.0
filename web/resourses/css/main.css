@@ -1,0 +1,247 @@
+body {
+    margin: 15px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    margin: 20px auto;
+    background: white;
+}
+body {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 16px;
+     background-color: dimgrey; 
+    color: #696969;
+    padding: 3px;
+}
+#main { 
+    background: aqua;
+    border-radius:10px;
+
+}
+
+#main{
+    padding: 5px;
+    padding-left:  5px;
+    padding-right: 5px;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+}
+h1 {
+    font-family: Georgia, serif;
+    border-bottom: 3px solid #cc9900;
+    color: #996600;
+    font-size: 30px;
+    text-align: right;
+}
+
+#header {
+    border-radius:10px;
+    height: 190px;
+    background: #33ff33;
+}
+
+#logo {
+    height: 155px;
+    width: 155px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#logoText {
+    float: left;
+    margin: 50px 140px 20px 70px;
+    /* font styles apply to text within alt tags */
+    font-family: 'American Typewriter', Courier, monospace;
+    font-size: 30px;
+    color: #333;
+}
+
+#widgetBar {
+    height: 50px;
+    width: 850px;
+    float: right;
+    background: #33ff33;
+}
+
+.headerWidget {
+    width: 200px;
+    margin: 20px 2px;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+    background: #0000cc
+}
+
+
+
+#footer {
+    
+    padding: 5px 50px;
+    border-radius:10px;
+    height: auto;
+    clear: left;
+    background: #aaa;
+    width: auto;
+    color:#ffffff;
+    text-align: center;
+    
+    //clear: both;
+}
+
+#indexLeftColumn {
+    height: auto;
+    width: 70%;
+    float: left;
+    background: #ffffff;
+}
+
+#indexRightColumn {
+    height: 400px;
+    width: 30%;
+    float: left;
+    background: #ffffff;
+}
+
+div#footerOfPage p{
+    margin-top: 20px;
+    background-color: red;
+}
+
+.categoryBox {
+    padding: 10px  10px ;
+    height: 100px;
+    width: 212px;
+    margin: 5px 60px 6px;
+    float: inherit;
+    background: dodgerblue;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    
+}
+
+
+span{
+    color: white;
+    font-style: bold;
+    
+}
+.categoryBox>span>categoryLabelText{
+    padding-top: 120px;
+}
+
+.login_form{
+    padding-left:50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.login_div{
+    width:350px;
+    border: 1px solid #eaeaea;
+    margin: 0 auto;
+    padding:10px;
+
+}
+
+.title {
+    color: #000;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+
+#middle {
+    background-color: #FFF;
+    width: 100%;
+    height: max-content;
+    margin:0 auto;
+    height: 100%;
+    border: 1px solid white;
+    display: block;
+}
+
+#textArea{
+    margin: 10px 50px;
+    border: 2px solid white;
+    height: max-content;
+}
+
+form{
+    font-size: 18px;
+    font-family: "Trebuchet MS","Times new roman";
+}
+
+label{
+    padding-top: 5px;
+    color: red;
+    cursor: help;
+    float: left;
+}
+
+.inputField{
+    float: right;
+ size: 30px;
+ margin: 5px;
+ height: 25px;
+}
+
+#registrationForm{
+    float: inside;
+    background-color: #eaeaea;
+    width: 30%;
+    height: 80%;
+    margin-left: 35%;
+    
+}
+
+
+
+ul#menu {
+    float: left;
+    padding: 0;
+    margin-bottom: 11px;
+}
+
+ul#menu li {
+    display: inline;
+    margin-right: 3px;
+}
+
+ul#menu li a {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #696969;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    color: white;
+    background-color: black;
+}
+
+.userHeaderWidget {
+    padding-top: 5px;
+    width: 260px;
+    height: 50px;
+    color: greenyellow;
+    margin: 10px 5px;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+    background: #fff;
+    background: dodgerblue;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.userHeaderWidget>span>a{
+    text-decoration-line: none;
+}
+.userHeaderWidget.span{
+    padding-top: 10px;
+    
+}

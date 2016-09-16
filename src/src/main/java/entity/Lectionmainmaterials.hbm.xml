@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Lectionmainmaterials" table="lectionmainmaterials" catalog="openeduuz" optimistic-lock="version">
+        <id name="materialId" type="java.lang.Integer">
+            <column name="materialID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="courselections" class="entity.Courselections" fetch="select">
+            <column name="lectionID" />
+        </many-to-one>
+        <property name="lectionPdfru" type="binary">
+            <column name="lectionPDFru" not-null="true" />
+        </property>
+        <property name="lectionPdfuz" type="binary">
+            <column name="lectionPDFuz" />
+        </property>
+        <property name="lectionPdfen" type="binary">
+            <column name="lectionPDFen" />
+        </property>
+        <property name="homeTaskRu" type="binary">
+            <column name="homeTaskRU" />
+        </property>
+        <property name="homeTaskUz" type="binary">
+            <column name="homeTaskUZ" />
+        </property>
+        <property name="homeTaskEn" type="binary">
+            <column name="homeTaskEN" />
+        </property>
+    </class>
+</hibernate-mapping>

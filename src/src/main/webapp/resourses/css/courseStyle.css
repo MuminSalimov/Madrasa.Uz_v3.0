@@ -1,0 +1,55 @@
+.courseList{
+    float:left;
+    display: block;
+}
+
+
+.courseList h3{
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    background-color: red;
+}
+
+.courseTitle{
+    height: 30px;
+    float:center;
+}
+
+.courseTitle a{
+    color:#378de5 ;
+    font-weight: bold; 
+    font-size: 15px; 
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.courseInfo{
+    width: 310px;
+    height: 50px;
+    font-size: 12px;
+    float:left;
+    margin:15px;
+    background-color: #ff0;
+}
+
+.courseImage{
+    padding-left: 5px;
+    width: 200px;
+    display: block;
+    float:left;
+}
+
+.courseDetails{
+    display: block;
+    float:right;
+    color: red;
+    margin-top: 10px;
+    text-align: left;
+    
+}
+
+.courseDetails>strong{
+    text-indent: 10px;
+}

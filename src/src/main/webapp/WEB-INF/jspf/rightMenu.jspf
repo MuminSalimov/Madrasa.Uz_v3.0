@@ -1,0 +1,20 @@
+<%@ page pageEncoding="UTF-8" %>
+<!DOCTYPE html begin rightMene>
+<div class="rightMenu">
+    <div class="menuButton">
+        <a href="myData.jsp">
+            <span class="categoryLabelText">Мои данные</span>
+        </a>
+    </div>
+    <div class="menuButton">
+        <a href="myCourses.jsp">
+            <span class="categoryLabelText">Мои курсы</span>
+        </a>
+    </div>
+    <div class="menuButton">
+        <a href="settings.jsp">
+            <span class="categoryLabelText">Настройки</span>
+        </a>
+    </div>
+</div>
+<!DOCTYPE html end rightMene>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.User" table="user" catalog="openeduuz" optimistic-lock="version">
+        <id name="email" type="string">
+            <column name="email" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="userName" type="string">
+            <column name="userName" length="20" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="30" not-null="true" />
+        </property>
+        <property name="passwordHint" type="string">
+            <column name="passwordHint" />
+        </property>
+        <property name="userSurname" type="string">
+            <column name="userSurname" length="20" />
+        </property>
+        <property name="userMiddlename" type="string">
+            <column name="userMiddlename" length="20" />
+        </property>
+        <set name="userlearningcourseses" table="userlearningcourses" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userEmail" length="45" not-null="true" />
+            </key>
+            <one-to-many class="entity.Userlearningcourses" />
+        </set>
+        <set name="usersandrolesmappings" table="usersandrolesmapping" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_email" length="45" not-null="true" />
+            </key>
+            <one-to-many class="entity.Usersandrolesmapping" />
+        </set>
+    </class>
+</hibernate-mapping>

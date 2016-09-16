@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Courses" table="courses" catalog="openeduuz" optimistic-lock="version">
+        <id name="courseId" type="java.lang.Integer">
+            <column name="courseId" />
+            <generator class="identity" />
+        </id>
+        <property name="courseNameRu" type="string">
+            <column name="courseNameRU" not-null="true" />
+        </property>
+        <property name="courseImage" type="binary">
+            <column name="courseImage" />
+        </property>
+        <property name="courseAuthor" type="string">
+            <column name="courseAuthor" length="65535" />
+        </property>
+        <property name="courseNameUz" type="string">
+            <column name="courseNameUZ" />
+        </property>
+        <property name="courseNameEn" type="string">
+            <column name="courseNameEN" />
+        </property>
+        <property name="courseLections" type="java.lang.Integer">
+            <column name="courseLections" />
+        </property>
+        <property name="courseDescriptionRu" type="string">
+            <column name="courseDescriptionRU" length="65535" />
+        </property>
+        <property name="courseDescriptionUz" type="string">
+            <column name="courseDescriptionUZ" length="65535" />
+        </property>
+        <property name="courseDescriptionEn" type="string">
+            <column name="courseDescriptionEN" length="65535" />
+        </property>
+        <property name="isActive" type="java.lang.Boolean">
+            <column name="isActive" />
+        </property>
+        <set name="courselectionses" table="courselections" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="courseID" not-null="true" />
+            </key>
+            <one-to-many class="entity.Courselections" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Userlearningcourses" table="userlearningcourses" catalog="openeduuz" optimistic-lock="version">
+        <id name="itemId" type="java.lang.Integer">
+            <column name="itemID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="courselections" class="entity.Courselections" fetch="select">
+            <column name="lectioinID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="entity.User" fetch="select">
+            <column name="userEmail" length="45" not-null="true" />
+        </many-to-one>
+        <property name="assesmentForLection" type="java.lang.Float">
+            <column name="assesmentForLection" precision="12" scale="0" />
+        </property>
+        <property name="assesmentForHomeTask" type="java.lang.Float">
+            <column name="assesmentForHomeTask" precision="12" scale="0" />
+        </property>
+        <property name="assesmentForTesting" type="java.lang.Float">
+            <column name="assesmentForTesting" precision="12" scale="0" />
+        </property>
+        <property name="learningCourseID" type="java.lang.Integer">
+            <column name="learningCourseID" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

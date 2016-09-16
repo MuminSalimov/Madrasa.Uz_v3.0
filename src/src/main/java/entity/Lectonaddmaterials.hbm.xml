@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.04.2016 23:34:43 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Lectonaddmaterials" table="lectonaddmaterials" catalog="openeduuz" optimistic-lock="version">
+        <id name="addMaterialId" type="java.lang.Integer">
+            <column name="addMaterialID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="courselections" class="entity.Courselections" fetch="select">
+            <column name="lectionID" />
+        </many-to-one>
+        <property name="addMaterialDescription" type="string">
+            <column name="addMaterialDescription" />
+        </property>
+        <property name="addMaterialRu" type="binary">
+            <column name="addMaterialRU" />
+        </property>
+        <property name="addMaterialUz" type="binary">
+            <column name="addMaterialUZ" />
+        </property>
+        <property name="addMaterialEn" type="binary">
+            <column name="addMaterialEN" />
+        </property>
+        <set name="addmaterialandtypesmappings" table="addmaterialandtypesmapping" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lectonAddMaterials_addMaterialID" not-null="true" />
+            </key>
+            <one-to-many class="entity.Addmaterialandtypesmapping" />
+        </set>
+    </class>
+</hibernate-mapping>

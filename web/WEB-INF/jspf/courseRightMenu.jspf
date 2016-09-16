@@ -1,0 +1,25 @@
+<%@ page pageEncoding="UTF-8" %>
+<!DOCTYPE html begin rightMenu>
+<div class="courseRightMenu">
+    <div class="menuButton">
+        <a href="lecture.jsp">
+            <span class="categoryLabelText">Лекция</span>
+        </a>
+    </div>
+    <div class="menuButton">
+        <a href="moduleMindMap.jsp">
+            <span class="categoryLabelText">Дополнительный материал</span>
+        </a>
+    </div>
+    <div class="menuButton">
+        <a href="testing.jsp">
+            <span class="categoryLabelText">Тестирование</span>
+        </a>
+    </div>
+    <div class="menuButton">
+        <a href="hometask.jsp">
+            <span class="categoryLabelText">Домашнее задание</span>
+        </a>
+    </div>
+</div>
+<!DOCTYPE html end rightMenu>
